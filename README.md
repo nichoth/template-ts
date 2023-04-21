@@ -1,6 +1,6 @@
 # template ts
 
-A template for typescript *dependency* modules that run in a browser environment. Uses `tape-run` for tests in a browser.
+A template for typescript *dependency* modules that run in node.
 
 ## use
 1. Use the template button in github. Or clone this then `rm -rf .git && git init`. Then `npm i && npm init`.
@@ -16,4 +16,4 @@ A template for typescript *dependency* modules that run in a browser environment
 * `preversion` npm hook -- lint via `standardx`.
 * `postversion` npm hook -- `git push && git push --tags && npm publish`
 * eslint via [standardx](https://www.npmjs.com/package/standardx) -- `npm run lint`
-* tests run in a browser environment via `tape-run`. Run them with `npm test`. Includes `tap` testing tools -- [tapzero](https://github.com/socketsupply/tapzero) and [tap-arc](https://www.npmjs.com/package/tap-arc)
+* compile tests and run in a node environment
