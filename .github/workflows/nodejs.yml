@@ -26,6 +26,6 @@ jobs:
           npm run lint
         env:
           CI: true
-      - name: Run tape tests
+      - name: Run tests
         run: |
           npm test
