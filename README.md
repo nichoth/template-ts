@@ -1,5 +1,7 @@
 # template ts
 
+![tests](https://github.com/nichoth/template-ts/actions/workflows/nodejs.yml/badge.svg)
+
 A template for typescript *dependency* modules that run in node.
 
 ## use
