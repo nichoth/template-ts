@@ -5,8 +5,8 @@ A template for typescript *dependency* modules that run in node.
 ## use
 
 1. Use the template button in github. Or clone this then `rm -rf .git && git init`. Then `npm i && npm init`.
-
-2. Edit the source code in `src/index.ts`.
+2. Edit `README.md`
+3. Edit the source code in `src/index.ts`.
 
 ## featuring
 
