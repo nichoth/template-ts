@@ -1,9 +1,6 @@
-name: Node test
-
+name: tests
 run-name: testing in node
-
 on: [push]
-
 jobs:
   test:
     runs-on: ubuntu-latest

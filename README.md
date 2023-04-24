@@ -19,3 +19,4 @@ A template for typescript *dependency* modules that run in node.
 * `postversion` npm hook -- `git push && git push --tags && npm publish`
 * eslint via [standardx](https://www.npmjs.com/package/standardx) -- `npm run lint`
 * compile tests and run in a node environment
+* CI via github actions
