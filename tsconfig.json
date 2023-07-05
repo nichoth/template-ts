@@ -23,5 +23,9 @@
     "declarationDir": "dist",
     "declarationMap": true
   },
-  "include": ["src/**/*"]
+  "include": [
+    "src/**/*",
+    "test",
+    "lib.es5.d.ts"
+  ]
 }
