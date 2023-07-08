@@ -9,7 +9,6 @@
     "allowJs": false,
     "skipLibCheck": true,
     "outDir": "dist",
-    "rootDir": "src",
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
@@ -27,5 +26,8 @@
     "src/**/*",
     "test",
     "lib.es5.d.ts"
+  ],
+  "exclude": [
+    "test/*.ts"
   ]
 }

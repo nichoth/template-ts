@@ -3,6 +3,9 @@ bundle.js
 .DS_Store
 src/*.js
 test/*.js
+test/*.js.map
+test/index.d.ts.map
+test/index.d.ts
 dist
 .env
 
