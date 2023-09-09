@@ -7,7 +7,6 @@
     }
   },
   "rules": {
-    "@typescript-eslint/no-unused-vars": "error",
     "operator-linebreak": ["off"],
     "no-multiple-empty-lines": [
       "error",
