@@ -12,6 +12,8 @@
     "postversion": "git push && git push --tags && npm publish",
     "prepublishOnly": "npm run build"
   },
+  "dependencies": {
+  },
   "devDependencies": {
     "@socketsupply/tapzero": "^0.7.1",
     "@typescript-eslint/parser": "^5.55.0",
