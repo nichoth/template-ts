@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     "listFiles": true,
-    "module": "ES2022",
+    "module": "NodeNext",
     "target": "ES2022",
-    "moduleResolution": "Node",
+    "moduleResolution": "NodeNext",
     "esModuleInterop": true,
     "lib": ["ES2021", "DOM"],
     "allowJs": false,
@@ -15,7 +15,6 @@
     "strict": true,
     "sourceMap": true,
     "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
     "isolatedModules": true,
     "noImplicitAny": false,
     "declaration": true,
@@ -23,7 +22,7 @@
     "declarationMap": true
   },
   "include": [
-    "src/**/*",
+    "src",
     "test",
     "lib.es5.d.ts"
   ]
