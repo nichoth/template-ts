@@ -10,17 +10,18 @@
     "build": "mkdir -p ./dist && rm -rf ./dist/* && npm run build-cjs && tsc --project tsconfig.build.json",
     "preversion": "npm run lint",
     "version": "auto-changelog --template keepachangelog --breaking-pattern 'BREAKING CHANGE' && git add CHANGELOG.md",
-    "postversion": "git push && git push --tags && npm publish",
+    "postversion": "git push --follow-tags && npm publish",
     "prepublishOnly": "npm run build"
   },
+  "dependencies": {},
   "devDependencies": {
-    "@nichoth/tapzero": "^0.8.0",
+    "@nichoth/tapzero": "^0.8.4",
     "@typescript-eslint/parser": "^5.55.0",
     "auto-changelog": "^2.4.0",
-    "esbuild": "^0.15.18",
+    "esbuild": "^0.19.9",
     "standardx": "^7.0.0",
-    "tap-arc": "^0.3.5",
-    "typescript": "^5.0.2"
+    "tap-arc": "^1.2.2",
+    "typescript": "^5.3.3"
   },
   "exports": {
     ".": {
