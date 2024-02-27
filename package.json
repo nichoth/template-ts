@@ -9,8 +9,9 @@
   "scripts": {
     "lint": "eslint \"./**/*.{ts,js}\"",
     "test": "npm run build && esbuild test/index.ts --platform=node --format=esm --keep-names --bundle | node --input-type=module | tap-arc",
-    "build-cjs": "esbuild src/*.ts --tsconfig=tsconfig.build.json --format=cjs --keep-names --outdir=./dist --out-extension:.js=.cjs",
-    "build": "mkdir -p ./dist && rm -rf ./dist/* && npm run build-cjs && tsc --project tsconfig.build.json",
+    "build-cjs": "esbuild src/*.ts --format=cjs --keep-names --tsconfig=tsconfig.build.json --outdir=./dist --out-extension:.js=.cjs --sourcemap=inline",
+    "build-esm": "esbuild src/*.ts --format=esm --keep-names --tsconfig=tsconfig.build.json --outdir=./dist --sourcemap=inline",
+    "build": "mkdir -p ./dist && rm -rf ./dist/* && npm run build-cjs && npm run build-esm",
     "preversion": "npm run lint",
     "version": "auto-changelog -p --template keepachangelog --breaking-pattern 'BREAKING CHANGE:' && git add CHANGELOG.md",
     "postversion": "git push --follow-tags && npm publish",
