@@ -3,6 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "main": "dist/index.js",
+  "files": [
+    "./dist/*"
+  ],
   "scripts": {
     "lint": "eslint \"./**/*.{ts,js}\"",
     "test": "npm run build && esbuild test/index.ts --platform=node --format=esm --keep-names --bundle | node --input-type=module | tap-arc",
