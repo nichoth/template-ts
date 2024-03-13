@@ -2,6 +2,7 @@
 ![tests](https://github.com/bicycle-codes/util/actions/workflows/nodejs.yml/badge.svg)
 [![types](https://img.shields.io/npm/types/@bicycle-codes/util?style=flat-square)](README.md)
 [![dependencies](https://img.shields.io/badge/dependencies-zero-brightgreen.svg?style=flat-square)](package.json)
+[![semantic versioning](https://img.shields.io/badge/semver-2.0.0-blue?logo=semver&style=flat-square)](https://semver.org/)
 [![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 
 A template for typescript *dependency* modules that run in node. See [template-ts-browser](https://github.com/nichoth/template-ts-browser) for the same thing but targeting a browser environment.
