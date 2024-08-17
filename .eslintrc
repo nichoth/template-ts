@@ -20,6 +20,12 @@
         "caughtErrorsIgnorePattern": "^_"
       }
     ],
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      {
+        "prefer": "type-imports"
+      }
+    ],
     "@typescript-eslint/no-explicit-any": "off",
     "operator-linebreak": ["off"],
     "multiline-ternary": "off",
