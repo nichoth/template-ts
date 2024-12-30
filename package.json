@@ -6,45 +6,35 @@
   "files": [
     "./dist/*"
   ],
+  "exports": {
+    ".": "./dist/index.js",
+    "./*": [
+      "./dist/*.js",
+      "./dist/*"
+    ]
+  },
   "scripts": {
     "lint": "eslint \"./**/*.{ts,js}\"",
     "test": "npm run build && esbuild test/index.ts --platform=node --format=esm --keep-names --bundle | node --input-type=module | tap-spec",
-    "build-cjs": "esbuild src/*.ts --format=cjs --keep-names --tsconfig=tsconfig.build.json --outdir=./dist --out-extension:.js=.cjs --sourcemap=inline",
-    "build-esm": "tsc --project tsconfig.build.json",
-    "build": "mkdir -p ./dist && rm -rf ./dist/* && npm run build-cjs && npm run build-esm",
+    "build-esm": "esbuild src/*.ts --format=esm --metafile=dist/meta.json --keep-names --tsconfig=tsconfig.build.json --outdir=./dist --sourcemap && tsc --emitDeclarationOnly --project tsconfig.build.json --outDir dist",
+    "build": "mkdir -p ./dist && rm -rf ./dist/* && npm run build-esm",
     "preversion": "npm run lint",
     "version": "auto-changelog -p --template keepachangelog --breaking-pattern 'BREAKING CHANGE:' && git add CHANGELOG.md",
     "postversion": "git push --follow-tags && npm publish",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "@bicycle-codes/tapzero": "^0.10.0",
-    "@bicycle-codes/debug": "^0.7.2",
+    "@substrate-system/tapzero": "^0.10.5",
+    "@substrate-system/debug": "^0.7.12",
     "@types/node": "^22.0.0",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "auto-changelog": "^2.4.0",
-    "esbuild": "^0.24.0",
+    "esbuild": "^0.24.2",
     "eslint": "^8.57.0",
     "eslint-config-standard": "^17.1.0",
     "tap-spec": "^5.0.0",
-    "typescript": "^5.4.5"
-  },
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    },
-    "./*": {
-      "import": [
-        "./dist/*.js",
-        "./dist/*"
-      ],
-      "require": [
-        "./dist/*.cjs",
-        "./dist/*"
-      ]
-    }
+    "typescript": "^5.7.2"
   },
   "license": "MIT",
   "author": "nichoth <nichoth@gmail.com> (https://nichoth.com)"
