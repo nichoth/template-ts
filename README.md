@@ -7,6 +7,11 @@
 
 A template for typescript *dependency* modules that run in node. See [template-ts-browser](https://github.com/nichoth/template-ts-browser) for the same thing but targeting a browser environment.
 
+>
+> [!IMPORTANT]  
+> This builds to **ESM only**.
+>
+
 ## use
 
 1. Use the template button in github. Or clone this then `rm -rf .git && git init`.
